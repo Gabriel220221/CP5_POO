@@ -8,6 +8,7 @@ import br.com.fiap.petfiap.model.Atendimento;
 import br.com.fiap.petfiap.model.GeradorProtocolo;
 import br.com.fiap.petfiap.service.AgendaService;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,11 +43,11 @@ public class AtendimentoController {
                     .comTutor(tutorNome)
                     .comDataHora(dataHora)
                     .construir(protocolo);
-            return ResponseEntity.status(201).body(service.agendar(atendimento));
+            return ResponseEntity.status(HttpStatus.CREATED).body(service.agendar(atendimento));
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().build();
         } catch (HorarioOcupadoException e) {
-            return ResponseEntity.status(409).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
     }
 
@@ -89,7 +90,7 @@ public class AtendimentoController {
         } catch (AtendimentoNaoEncontradoException e) {
             return ResponseEntity.notFound().build();
         } catch (StatusInvalidoException e) {
-            return ResponseEntity.status(409).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
     }
 
@@ -101,7 +102,7 @@ public class AtendimentoController {
         } catch (AtendimentoNaoEncontradoException e) {
             return ResponseEntity.notFound().build();
         } catch (StatusInvalidoException e) {
-            return ResponseEntity.status(409).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
     }
 }
