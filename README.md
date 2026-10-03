@@ -4,12 +4,13 @@
 
 **Grupo:** _(preencher: nome do grupo)_
 
-| Integrante | RM | Turma |
-|---|---|---|
-| _(preencher)_ | _(preencher)_ | _(preencher)_ |
-| _(preencher)_ | _(preencher)_ | _(preencher)_ |
-| _(preencher)_ | _(preencher)_ | _(preencher)_ |
-| _(preencher)_ | _(preencher)_ | _(preencher)_ |
+| Integrant | 2CCPW
+Gabriel Simioni - RM563475
+Guilherme Vega - RM562655
+Davi Xavier - RM563572
+Gabriel Pereira -RM563571
+Luiz henrique- RM563795
+Felipe Ramalho - RM565073
 
 | Campo | |
 |---|---|
