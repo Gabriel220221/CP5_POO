@@ -3,12 +3,18 @@
 ## Identificação
 
 
-| Integrant | 2CCPW
+| Integrant | 2CCPW|
+
 |*Gabriel Simioni - RM563475*|
+
 |*Guilherme Vega - RM562655*|
+
 |*Davi Xavier - RM563572*|
+
 |*Gabriel Pereira -RM563571*|
+
 |*Luiz henrique- RM563795*|
+
 |*Felipe Ramalho - RM565073*|
 
 | Campo | |
