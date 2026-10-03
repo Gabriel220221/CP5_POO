@@ -30,4 +30,18 @@ public class BanhoTest {
         // Assert
         assertEquals(45, duracao);
     }
+
+    @Test
+    public void deveCobrarPrecoDoBanhoConformeOPorte() {
+        // Arrange
+        LocalDateTime data = LocalDateTime.of(2026, 10, 1, 10, 0);
+        Banho pequeno = new Banho(1, "Rex", "PEQUENO", "Ana", data);
+        Banho medio = new Banho(2, "Mimi", "MEDIO", "Bruno", data);
+        Banho grande = new Banho(3, "Thor", "GRANDE", "Carla", data);
+
+        // Act + Assert: PEQUENO R$ 60, MEDIO R$ 80, GRANDE R$ 100
+        assertEquals(60.0, pequeno.calcularPreco(), 0.001);
+        assertEquals(80.0, medio.calcularPreco(), 0.001);
+        assertEquals(100.0, grande.calcularPreco(), 0.001);
+    }
 }
