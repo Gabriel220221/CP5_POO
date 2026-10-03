@@ -2,7 +2,6 @@
 
 ## Identificação
 
-**Grupo:** _(preencher: nome do grupo)_
 
 | Integrant | 2CCPW
 Gabriel Simioni - RM563475
