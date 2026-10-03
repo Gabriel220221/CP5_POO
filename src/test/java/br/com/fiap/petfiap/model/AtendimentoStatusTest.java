@@ -25,4 +25,16 @@ public class AtendimentoStatusTest {
         assertThrows(StatusInvalidoException.class, banho::cancelar);
         assertEquals("CONCLUIDO", banho.getStatus());
     }
+
+    @Test
+    public void deveCancelarQuandoAtendimentoEstaAgendado() {
+        // Arrange
+        Banho banho = banhoDoRex();
+
+        // Act
+        banho.cancelar();
+
+        // Assert
+        assertEquals("CANCELADO", banho.getStatus());
+    }
 }
