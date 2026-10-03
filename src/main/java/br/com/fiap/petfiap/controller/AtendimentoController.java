@@ -7,7 +7,6 @@ import br.com.fiap.petfiap.builder.AtendimentoBuilder;
 import br.com.fiap.petfiap.model.Atendimento;
 import br.com.fiap.petfiap.model.GeradorProtocolo;
 import br.com.fiap.petfiap.service.AgendaService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +19,11 @@ import java.util.Map;
 @RequestMapping("/api/atendimentos")
 public class AtendimentoController {
 
-    @Autowired
-    private AgendaService service;
+    private final AgendaService service;
+
+    public AtendimentoController(AgendaService service) {
+        this.service = service;
+    }
 
     // POST /api/atendimentos?tutorNome=Ana - Agendar atendimento
     // Ex.: POST "/api/atendimentos?tipo=BANHO&petNome=Rex&porte=PEQUENO&tutorNome=Ana&dataHora=2026-10-01T10:00"
